@@ -1,36 +1,40 @@
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { toast } from 'react-toastify';
 import Option from '../Option/Option';
+import Swal from 'sweetalert2/src/sweetalert2.js';
 
-const Question = ({ques}) => {
 
-    const {correctAnswer , question , id} = ques;
+const Question = ({ ques }) => {
+
+    const { correctAnswer, question, id } = ques;
     const options = ques.options;
 
-    const correctAnswerShow = () =>{
-    toast.success('Product Added' , {autoClose : 300});
-        
+    const correctAnswerShow = () => {
+        Swal.fire(
+            'Correct answer',
+             correctAnswer,
+            'success'
+          )
     }
 
     return (
 
         <div className='bg-amber-300 w-9/12 mx-auto p-5'>
             <h1 className='font-bold text-2xl'>{question}</h1>
-          <div>
-           {
-                options.map(option => <Option
-                     opt={option}
-                     id={id}
-                     correct={correctAnswer}
-                     ></Option>)
-            }
-           </div>
-           <div>
-            <FontAwesomeIcon onClick={correctAnswerShow} className='text-xl' icon={faEye}></FontAwesomeIcon>
-           </div>
-        
+            <div>
+                {
+                    options.map(option => <Option
+                        opt={option}
+                        id={id}
+                        correct={correctAnswer}
+                    ></Option>)
+                }
+            </div>
+            <div>
+                <FontAwesomeIcon onClick={correctAnswerShow} className='text-xl' icon={faEye}></FontAwesomeIcon>
+            </div>
+
         </div>
 
     );

@@ -1,15 +1,23 @@
+import Swal from 'sweetalert2/src/sweetalert2.js';
 import React from 'react';
-import { toast } from 'react-toastify';
 
 
 const Option = ({ opt, id, correct }) => {
 
     const findCorrect = (clickedOption) => {
         if (clickedOption === correct) {
-            toast.success('kasm' , {autoClose:454})
+            Swal.fire(
+                'Good job!',
+                'Right Answer',
+                'success'
+              )
         }
         else {
-            toast.success('fh' , {autoClose:454})
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'wrong answer!'
+              })
         }
     }
 
