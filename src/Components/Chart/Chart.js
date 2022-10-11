@@ -8,9 +8,9 @@ const Chart = () => {
     <div>
    
      <BarChart
-        height={600}
-        width={500}
-        className="mx-auto my-8"
+        height={550}
+        width={370}
+        className="mx-auto my-12"
         data={data}>
           <Bar dataKey='total' fill='green'></Bar>
           <XAxis dataKey='name' ></XAxis>

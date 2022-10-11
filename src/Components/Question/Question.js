@@ -2,8 +2,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Option from '../Option/Option';
-import Swal from 'sweetalert2/src/sweetalert2.js';
-
+import Swal from 'sweetalert2'
 
 const Question = ({ ques }) => {
 
@@ -13,8 +12,8 @@ const Question = ({ ques }) => {
     const correctAnswerShow = () => {
         Swal.fire(
             'Correct answer',
-             correctAnswer,
-            'success'
+             correctAnswer
+            
           )
     }
 
