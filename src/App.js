@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Blog from './Components/Blog/Blog';
+import Chart from './Components/Chart/Chart';
 import Header from './Components/Header/Header';
 import Quiz from './Components/Quiz/Quiz';
 import Topics from './Components/Topics/Topics';
@@ -35,11 +37,14 @@ function App() {
         },
         {
           path: '/chart',
-          element: <div>fjkgnfj</div>
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Chart></Chart>
         },
         {
           path: '/blog',
-          element: <div>fjkgndfyhtrfj</div>
+          element: <Blog></Blog>
         },
         {
           path:'/topic/:topicId',
