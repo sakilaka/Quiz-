@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './Components/Blog/Blog';
 import Chart from './Components/Chart/Chart';
+import ErrorPage from './Components/ErrorPage';
 import Header from './Components/Header/Header';
 import Quiz from './Components/Quiz/Quiz';
 import Topics from './Components/Topics/Topics';
@@ -11,6 +12,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
+      errorElement:<ErrorPage></ErrorPage>,
       element: <Main></Main>,
       children: [
         {
