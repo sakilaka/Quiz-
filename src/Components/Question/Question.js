@@ -8,11 +8,10 @@ const Question = ({ques}) => {
 
     const {correctAnswer , question , id} = ques;
     const options = ques.options;
-    console.log(options);
 
     const correctAnswerShow = () =>{
-        toast.success({correctAnswer} ,{autoClose:500})
-        console.log(correctAnswer);
+    toast.success('Product Added' , {autoClose : 300});
+        
     }
 
     return (

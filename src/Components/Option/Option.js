@@ -6,10 +6,10 @@ const Option = ({ opt, id, correct }) => {
 
     const findCorrect = (clickedOption) => {
         if (clickedOption === correct) {
-            toast('Right Answer', { autoClose: 500 })
+            toast.success('kasm' , {autoClose:454})
         }
         else {
-            toast('Wrong Answer', { autoClose: 500 })
+            toast.success('fh' , {autoClose:454})
         }
     }
 

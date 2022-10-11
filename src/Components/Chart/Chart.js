@@ -18,6 +18,8 @@ const Chart = () => {
           <Tooltip></Tooltip>
 
       </BarChart>
+      
+      
     </div>
   );
 };

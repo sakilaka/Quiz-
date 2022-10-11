@@ -5,6 +5,7 @@ import Topic from '../Topic/Topic';
 const Topics = () => {
      const load = useLoaderData();
      const topics = load.data;
+     
     
     return (
         <div className='lg:grid lg:grid-cols-2'>
