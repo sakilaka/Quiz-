@@ -20,7 +20,8 @@ const Chart = () => {
 
       </BarChart>
       
-      
+  
+  
     </div>
   );
 };

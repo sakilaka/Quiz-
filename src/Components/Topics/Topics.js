@@ -8,7 +8,7 @@ const Topics = () => {
      
     
     return (
-        <div className='lg:grid lg:grid-cols-2'>
+        <div className='lg:grid lg:grid-cols-2 margin'>
             {
                 topics.map(topic => <Topic 
                     key={topic.id}
