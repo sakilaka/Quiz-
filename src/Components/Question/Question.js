@@ -8,6 +8,7 @@ const Question = ({ ques }) => {
 
     const { correctAnswer, question, id } = ques;
     const options = ques.options;
+    const q = question.slice(3,-4);
 
     const correctAnswerShow = () => {
         Swal.fire(
@@ -20,7 +21,7 @@ const Question = ({ ques }) => {
     return (
 
         <div className='bg-amber-300 w-9/12 mx-auto p-5'>
-            <h1 className='font-bold text-2xl'>{question}</h1>
+            <h1 className='font-bold text-2xl'>{q}</h1>
             <div>
                 {
                     options.map(option => <Option

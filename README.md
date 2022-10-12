@@ -75,7 +75,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 **Quiz Boss**
 
 ### `project Live site Link`
-[https://snazzy-sherbet-989150.netlify.app/] 
+[] 
 
 
 ### `Favicon`
